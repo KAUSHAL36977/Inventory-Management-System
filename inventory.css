@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f4f6; /* Light gray background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #1e3a8a; /* Deep blue */
+  color: white;
+  padding: 16px;
+}
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: text-decoration 0.3s;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  padding: 16px;
+}
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* Dashboard Cards */
+section .grid {
+  display: grid;
+  gap: 16px;
+}
+.bg-white {
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.bg-white h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.bg-white p {
+  color: #374151; /* Gray text */
+  font-size: 1rem;
+}
+
+/* Buttons */
+a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+a.bg-green-500:hover {
+  background-color: #059669; /* Darker green */
+}
+a.bg-red-500:hover {
+  background-color: #dc2626; /* Darker red */
+}
+a.bg-yellow-500:hover {
+  background-color: #ca8a04; /* Darker yellow */
+}
+
+/* Products */
+article img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
