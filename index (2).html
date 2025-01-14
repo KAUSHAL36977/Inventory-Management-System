@@ -1,0 +1,304 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Inventory Management System
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <header class="bg-blue-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     Inventory Management System
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#">
+        Dashboard
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Products
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Suppliers
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Orders
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Reports
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Settings
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="mb-8">
+    <h2 class="text-xl font-bold mb-4">
+     Dashboard
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Total Products
+      </h3>
+      <p class="text-gray-700 text-2xl">
+       150
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Total Suppliers
+      </h3>
+      <p class="text-gray-700 text-2xl">
+       25
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Total Orders
+      </h3>
+      <p class="text-gray-700 text-2xl">
+       75
+      </p>
+     </div>
+    </div>
+   </section>
+   <section>
+    <div class="flex justify-between items-center mb-4">
+     <h2 class="text-xl font-bold">
+      Products
+     </h2>
+     <div class="flex space-x-2">
+      <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+       Add Product
+      </a>
+      <a class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" href="#">
+       Remove Product
+      </a>
+     </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <article class="bg-white p-4 rounded shadow">
+      <img alt="A detailed description of the product image 1" class="w-full h-48 object-cover rounded mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-lg font-bold mb-2">
+       Product 1
+      </h3>
+      <p class="text-gray-700">
+       Category: Electronics
+      </p>
+      <p class="text-gray-700">
+       Price: $299.99
+      </p>
+      <p class="text-gray-700">
+       Stock: 50
+      </p>
+      <p class="text-gray-700">
+       Supplier: Supplier A
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <img alt="A detailed description of the product image 2" class="w-full h-48 object-cover rounded mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-lg font-bold mb-2">
+       Product 2
+      </h3>
+      <p class="text-gray-700">
+       Category: Furniture
+      </p>
+      <p class="text-gray-700">
+       Price: $199.99
+      </p>
+      <p class="text-gray-700">
+       Stock: 20
+      </p>
+      <p class="text-gray-700">
+       Supplier: Supplier B
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <img alt="A detailed description of the product image 3" class="w-full h-48 object-cover rounded mb-4" src="https://placehold.co/600x400"/>
+      <h3 class="text-lg font-bold mb-2">
+       Product 3
+      </h3>
+      <p class="text-gray-700">
+       Category: Clothing
+      </p>
+      <p class="text-gray-700">
+       Price: $49.99
+      </p>
+      <p class="text-gray-700">
+       Stock: 100
+      </p>
+      <p class="text-gray-700">
+       Supplier: Supplier C
+      </p>
+     </article>
+    </div>
+   </section>
+   <section>
+    <h2 class="text-xl font-bold mb-4">
+     Suppliers
+    </h2>
+    <div class="flex justify-between mb-4">
+     <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+      Add Supplier
+     </a>
+     <a class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" href="#">
+      Remove Supplier
+     </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier A
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierA@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 123-456-7890
+      </p>
+      <p class="text-gray-700">
+       Address: 123 Main St, City, Country
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier B
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierB@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 098-765-4321
+      </p>
+      <p class="text-gray-700">
+       Address: 456 Elm St, City, Country
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier C
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierC@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 555-555-5555
+      </p>
+      <p class="text-gray-700">
+       Address: 789 Oak St, City, Country
+      </p>
+     </article>
+    </div>
+   </section>
+   <section>
+    <div class="flex justify-between items-center mb-4">
+     <h2 class="text-xl font-bold">
+      Orders / Stock Movement
+     </h2>
+     <div class="flex space-x-2">
+      <a class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600" href="#">
+       Pending
+      </a>
+      <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+       Completed
+      </a>
+      <a class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" href="#">
+       Cancelled
+      </a>
+     </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Order 1
+      </h3>
+      <p class="text-gray-700">
+       Product: Product 1
+      </p>
+      <p class="text-gray-700">
+       Quantity: 10
+      </p>
+      <p class="text-gray-700">
+       Total Price: $2999.90
+      </p>
+      <p class="text-gray-700">
+       Status: Completed
+      </p>
+      <p class="text-gray-700">
+       Date: 2023-01-15
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Order 2
+      </h3>
+      <p class="text-gray-700">
+       Product: Product 2
+      </p>
+      <p class="text-gray-700">
+       Quantity: 5
+      </p>
+      <p class="text-gray-700">
+       Total Price: $999.95
+      </p>
+      <p class="text-gray-700">
+       Status: Pending
+      </p>
+      <p class="text-gray-700">
+       Date: 2023-01-20
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Order 3
+      </h3>
+      <p class="text-gray-700">
+       Product: Product 3
+      </p>
+      <p class="text-gray-700">
+       Quantity: 20
+      </p>
+      <p class="text-gray-700">
+       Total Price: $999.80
+      </p>
+      <p class="text-gray-700">
+       Status: Cancelled
+      </p>
+      <p class="text-gray-700">
+       Date: 2023-01-25
+      </p>
+     </article>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-blue-600 text-white p-4 mt-8">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2023 Inventory Management System. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
