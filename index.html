@@ -1,0 +1,195 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Inventory Management System
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <header class="bg-blue-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+     Inventory Management System
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#">
+        Dashboard
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Products
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Suppliers
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Orders
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Reports
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Settings
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="mb-8">
+    <h2 class="text-xl font-bold mb-4">
+     Dashboard
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Total Products
+      </h3>
+      <p class="text-gray-700 text-2xl">
+       150
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Total Suppliers
+      </h3>
+      <p class="text-gray-700 text-2xl">
+       25
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Total Orders
+      </h3>
+      <p class="text-gray-700 text-2xl">
+       75
+      </p>
+     </div>
+    </div>
+   </section>
+   <section>
+    <h2 class="text-xl font-bold mb-4">
+     Suppliers
+    </h2>
+    <div class="flex justify-between mb-4">
+     <a class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" href="#">
+      Add Supplier
+     </a>
+     <a class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" href="#">
+      Remove Supplier
+     </a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier A
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierA@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 123-456-7890
+      </p>
+      <p class="text-gray-700">
+       Address: 123 Main St, City, Country
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier B
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierB@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 098-765-4321
+      </p>
+      <p class="text-gray-700">
+       Address: 456 Elm St, City, Country
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier C
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierC@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 555-555-5555
+      </p>
+      <p class="text-gray-700">
+       Address: 789 Oak St, City, Country
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier D
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierD@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 444-444-4444
+      </p>
+      <p class="text-gray-700">
+       Address: 101 Pine St, City, Country
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier E
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierE@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 333-333-3333
+      </p>
+      <p class="text-gray-700">
+       Address: 202 Maple St, City, Country
+      </p>
+     </article>
+     <article class="bg-white p-4 rounded shadow">
+      <h3 class="text-lg font-bold mb-2">
+       Supplier F
+      </h3>
+      <p class="text-gray-700">
+       Email: supplierF@example.com
+      </p>
+      <p class="text-gray-700">
+       Phone: 222-222-2222
+      </p>
+      <p class="text-gray-700">
+       Address: 303 Birch St, City, Country
+      </p>
+     </article>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-blue-600 text-white p-4 mt-8">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2023 Inventory Management System. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
