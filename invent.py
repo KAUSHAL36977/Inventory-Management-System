@@ -134,3 +134,69 @@ class OrderSerializer(serializers.ModelSerializer):
         data['total_price'] = product.price * quantity
         return data
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# api/views.py
+from rest_framework import viewsets, status
+from rest_framework.response import Response
+from .models import Product, Supplier, Order
+from .serializers import ProductSerializer, SupplierSerializer, OrderSerializer
+
+class SupplierViewSet(viewsets.ModelViewSet):
+    queryset = Supplier.objects.all()
+    serializer_class = SupplierSerializer
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.prefetch_related('orders').all()
+    serializer_class = ProductSerializer
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.select_related('product').all()
+    serializer_class = OrderSerializer
+
+    def perform_create(self, serializer):
+        order = serializer.save()
+        product = order.product
+        product.stock -= order.quantity
+        product.save()
+
+
+
+
+
+
+
+
+
+
+
+
+
+# api/tests.py
+from django.test import TestCase
+from .models import Supplier, Product, Order
+
+class SupplierTestCase(TestCase):
+    def setUp(self):
+        self.supplier = Supplier.objects.create(
+            name="Test Supplier",
+            email="supplier@example.com",
+            phone="+1234567890",
+            address="123 Test St"
+        )
+
+    def test_supplier_creation(self):
+        self.assertEqual(Supplier.objects.count(), 1)
+        self.assertEqual(self.supplier.name, "Test Supplier")
+
