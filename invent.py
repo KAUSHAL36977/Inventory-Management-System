@@ -27,3 +27,66 @@ DATABASES = {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# api/models.py
+from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator, RegexValidator
+
+class Supplier(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    email = models.EmailField(unique=True)
+    phone = models.CharField(
+        max_length=15,
+        validators=[RegexValidator(r'^\+?1?\d{9,15}$')],
+        unique=True
+    )
+    address = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+class Product(models.Model):
+    name = models.CharField(max_length=100)
+    category = models.CharField(max_length=100)
+    price = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        validators=[MinValueValidator(0)]
+    )
+    stock = models.PositiveIntegerField(validators=[MinValueValidator(0)])
+    supplier = models.ForeignKey(Supplier, related_name='products', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+class Order(models.Model):
+    STATUS_CHOICES = [
+        ('Pending', 'Pending'),
+        ('Shipped', 'Shipped'),
+        ('Delivered', 'Delivered'),
+        ('Cancelled', 'Cancelled'),
+    ]
+
+    product = models.ForeignKey(Product, related_name='orders', on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(validators=[MinValueValidator(1)])
+    total_price = models.DecimalField(max_digits=10, decimal_places=2)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pending')
+    date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Order {self.id} - {self.product.name}"
