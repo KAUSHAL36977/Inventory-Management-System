@@ -90,3 +90,47 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order {self.id} - {self.product.name}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# api/serializers.py
+from rest_framework import serializers
+from .models import Product, Supplier, Order
+
+class SupplierSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Supplier
+        fields = '__all__'
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__'
+
+class OrderSerializer(serializers.ModelSerializer):
+    total_price = serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
+
+    class Meta:
+        model = Order
+        fields = '__all__'
+
+    def validate(self, data):
+        product = data['product']
+        quantity = data['quantity']
+        if product.stock < quantity:
+            raise serializers.ValidationError(f"Not enough stock for {product.name}. Available: {product.stock}")
+        data['total_price'] = product.price * quantity
+        return data
+
